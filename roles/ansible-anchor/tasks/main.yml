@@ -21,6 +21,9 @@
       - ufw 
       - python-mysqldb
 
+- name: Install the Python MySQLB module
+  pip: name=MySQL-python
+
 - name: MySQL - Ensure MySQL is running and enabled on startup
   service: name=mysql state=started enabled=true
 
