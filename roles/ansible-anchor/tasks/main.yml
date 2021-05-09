@@ -14,10 +14,10 @@
       - apache2 
       - libapache2-mod-php 
       - mysql-server 
-      - php7.0-curl 
-      - php5-mcrypt 
-      - php5-gd 
-      - php5-mysql
+      - php-curl 
+      - php-mcrypt 
+      - php-gd 
+      - php-mysql
       - ufw 
       - python-mysqldb
 
