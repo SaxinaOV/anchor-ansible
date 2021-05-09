@@ -1,0 +1,6 @@
+---
+- name: Tests
+  hosts: all
+  become: yes
+  roles:
+    - ../ansible-anchor
