@@ -14,7 +14,7 @@
       - apache2 
       - libapache2-mod-php 
       - mysql-server 
-      - php5-curl 
+      - php5.6-curl 
       - php5-mcrypt 
       - php5-gd 
       - php5-mysql
