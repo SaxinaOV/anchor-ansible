@@ -68,7 +68,7 @@
   file: path=/var/www/html/index.html state=absent
 
 - name: Anchor - Get anchor and uncompress
-  unarchive: src=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-{{ anchor_version }}.zip dest=/var/www/html remote_src=yes
+  unarchive: src=https://github.com/anchorcms/anchor-cms/archive/refs/tags/{{ anchor_version }}.zip dest=/var/www/html remote_src=yes
 
 - name: Anchor - Clean the archive
   file: path=/var/www/html/anchor-cms-{{ anchor_version }}.zip state=absent
