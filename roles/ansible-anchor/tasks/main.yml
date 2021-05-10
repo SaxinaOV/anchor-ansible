@@ -76,9 +76,9 @@
 - name: Anchor - Change permissions and ownership of blog
   file: path=/var/www/html/anchor-cms state=directory recurse=yes owner=www-data group=www-data
 
-- name: Anchor - Allow .htaccess in apache2
-  lineinfile: dest=/etc/apache2/apache2.conf regexp='^\tAllowOverride None$' insertbefore='^\s*AllowOverride None$' line='<Directory "/var/www/html">\nAllowOverride All\n</Directory>'
-  notify: Restart apache
+#- name: Anchor - Allow .htaccess in apache2
+#  lineinfile: dest=/etc/apache2/apache2.conf regexp='^\tAllowOverride None$' insertbefore='^\s*AllowOverride None$' line='<Directory "/var/www/html">\nAllowOverride All\n</Directory>'
+#  notify: Restart apache
 
 - name: Anchor - Set apache up with correct Document Root
   lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp='^\sDocumentRoot /var/www/html$' line='DocumentRoot /var/www/html/anchor-cms'
