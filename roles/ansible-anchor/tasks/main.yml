@@ -65,11 +65,7 @@
   file: path=/var/www/html/index.html state=absent
 
 - name: Anchor - Get anchor and uncompress
-<<<<<<< HEAD
   unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
-=======
-  unarchive: src=https://github.com/anchorcms/anchor-cms/archive/refs/tags/{{ anchor_version }}.zip dest=/var/www/html remote_src=yes
->>>>>>> 418144d4fb8e9f4e7754f96be414790e659b67ef
 
 - name: Anchor - Clean the archive
   file: path=/var/www/html/anchor-cms-{{ anchor_version }}-bundled.zip state=absent
