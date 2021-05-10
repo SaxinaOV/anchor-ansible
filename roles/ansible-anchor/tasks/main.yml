@@ -91,3 +91,8 @@
 - name: Anchor - Copy .htaccess file to client
   copy: src=htaccess dest=/var/www/html/anchor-cms/.htaccess owner=root group=root mode=0644
   notify: Restart apache
+
+- name: Delete install directory
+  file:
+    state: absent
+    path: /var/www/html/anchor-cms
