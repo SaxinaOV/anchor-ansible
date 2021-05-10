@@ -77,7 +77,7 @@
   file: path=/var/www/html/anchor-cms state=directory recurse=yes owner=www-data group=www-data
 
 - name: Anchor - Allow .htaccess in apache2
-  lineinfile: dest=/etc/apache2/apache2.conf regexp='^\tAllowOverride None$' insertbefore='^\s*AllowOverride None$' line='AllowOverride All'
+  lineinfile: dest=/etc/apache2/apache2.conf regexp='^\tAllowOverride None$' insertbefore='^\s*AllowOverride None$' line='<Directory "/var/www/html">\nAllowOverride All\т</Directory>'
   notify: Restart apache
 
 - name: Anchor - Set apache up with correct Document Root
