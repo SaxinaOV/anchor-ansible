@@ -95,4 +95,4 @@
 - name: Delete install directory
   file:
     state: absent
-    path: /var/www/html/anchor-cms
+    path: /var/www/html/anchor-cms/install
