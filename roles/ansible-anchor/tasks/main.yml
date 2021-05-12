@@ -68,10 +68,10 @@
   file: path=/var/www/html/index.html state=absent
   
 - name: Get anchor
-  get_url: url=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-0.12.7.zip dest=/tmp/anchor.zip
+  get_url: url=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-0.12.7.zip dest=/var/www/html/anchor.zip
 
 - name: Uncompress anchor
-  unarchive: src=/tmp/anchor.zip dest=/var/www/html 
+  unarchive: src=/var/www/html/anchor.zip dest=/var/www/html 
 
 #- name: Anchor - Get anchor
 #  unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
