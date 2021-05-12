@@ -9,7 +9,7 @@
 - name: Setup - Install required packages for anchor
   apt: pkg={{ item }} state=latest
   with_items:
-      - gtar
+      - tar
       - unzip 
       - vim 
       - apache2 
