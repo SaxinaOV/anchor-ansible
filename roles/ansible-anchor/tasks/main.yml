@@ -70,6 +70,7 @@
   
 - name: Get anchor
   get_url: url=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-0.12.7.zip dest=/tmp/anchor.zip
+  force: yes
 
 - name: Uncompress anchor
   unarchive: src=/tmp/anchor.zip dest=/tmp copy=no creates=/tmp/anchor/index.php
