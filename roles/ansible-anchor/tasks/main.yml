@@ -68,18 +68,18 @@
 - name: Anchor - Clean apache's index.html
   file: path=/var/www/html/index.html state=absent
   
-- name: Get anchor
-  get_url: url=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-0.12.7.zip dest=/tmp/anchor.zip
-  force: yes
+#- name: Get anchor
+#  get_url: url=https://github.com/SaxinaOV/anchor-ansible/blob/main/anchor-cms-0.12.7.zip dest=/tmp/anchor.zip
+  #force: yes
 
-- name: Uncompress anchor
-  unarchive: src=/tmp/anchor.zip dest=/tmp copy=no creates=/tmp/anchor/index.php
+#- name: Uncompress anchor
+#  unarchive: src=/tmp/anchor.zip dest=/tmp copy=no creates=/tmp/anchor/index.php
 
-- name: Copy files into /var/www/html/
-  command: cp -a /tmp/anchor/. /var/www/html/ creates=/var/www/html/index.php
+#- name: Copy files into /var/www/html/
+#  command: cp -a /tmp/anchor/. /var/www/html/ creates=/var/www/html/index.php
 
-#- name: Anchor - Get anchor
-#  unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
+- name: Anchor - Get anchor
+  unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
 
 - name: Anchor - Clean the archive
   file: path=/var/www/html/anchor-cms-{{ anchor_version }}-bundled.zip state=absent
