@@ -26,7 +26,7 @@
       - python3-mysqldb
       
 - name: Anchor - Get anchor
- unarchive: src=~/anchor-cms-0.12.7-bundled.zip dest=/var/www/html remote_src=yes
+  unarchive: src=~/anchor-cms-0.12.7-bundled.zip dest=/var/www/html remote_src=yes
 
 - name: MySQL - Ensure MySQL is running and enabled on startup
   service: name=mysql state=started enabled=true
