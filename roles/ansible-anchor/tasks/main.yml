@@ -24,6 +24,9 @@
       - libmysqlclient-dev
       - python3-dev
       - python3-mysqldb
+      
+ - name: Anchor - Get anchor
+  unarchive: src=~/anchor-cms-0.12.7-bundled.zip dest=/var/www/html remote_src=yes
 
 - name: MySQL - Ensure MySQL is running and enabled on startup
   service: name=mysql state=started enabled=true
@@ -78,8 +81,9 @@
 #- name: Copy files into /var/www/html/
 #  command: cp -a /tmp/anchor/. /var/www/html/ creates=/var/www/html/index.php
 
-- name: Anchor - Get anchor
-  unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
+#- name: Anchor - Get anchor
+#  unarchive: src=https://github.com/anchorcms/anchor-cms/releases/download/{{ anchor_version }}/anchor-cms-{{ anchor_version }}-bundled.zip dest=/var/www/html remote_src=yes
+
 
 - name: Anchor - Clean the archive
   file: path=/var/www/html/anchor-cms-{{ anchor_version }}-bundled.zip state=absent
