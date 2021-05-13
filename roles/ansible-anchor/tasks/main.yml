@@ -16,7 +16,7 @@
       - libapache2-mod-php 
       - mysql-server 
       - php-curl 
-      #- php-mcrypt 
+      - php-mcrypt 
       - php-gd 
       - php-mysql
       - ufw 
